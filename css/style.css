@@ -1,12 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+.foodList-container {
+  padding: 2rem;
+}
+
 .section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(260px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-gap: 2rem;
+}
+
+.section .food-box {
+  width: 300px;
+  background: #f1eaea;
+}
+
+.section .food-box .info {
+  padding: 1rem 0.5rem;
+}
+
+.section .food-box .info .title {
+  font-size: 1rem;
+}
+
+.food-img {
+  max-width: 300px;
+  width: 100%;
 }
 
 @-webkit-keyframes spinner {
@@ -48,7 +68,7 @@ body {
 }
 
 .navbar {
-  background: #2cf1ff;
+  background: #68e8ff;
   padding: 1rem;
   text-align: center;
 }
